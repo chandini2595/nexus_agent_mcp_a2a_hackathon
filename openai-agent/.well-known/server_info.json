@@ -1,0 +1,7 @@
+{
+  "name": "AWS Assistant",
+  "human_description": "AWS cloud expert that answers questions about AWS services, architecture, best practices, and technology.",
+  "model_description": "You are an AWS cloud expert who helps users with technical questions about AWS services, instance types, best practices, architecture, and cloud solutions.",
+  "logo_url": "https://example.com/logo.png",
+  "contact_email": "support@example.com"
+} 

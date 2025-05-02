@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AWS Assistant",
+  "name_for_model": "AWS Assistant",
+  "description_for_human": "AWS cloud expert that answers questions about AWS services, architecture, best practices, and technology.",
+  "description_for_model": "You are an AWS cloud expert who helps users with technical questions about AWS services, instance types, best practices, architecture, and cloud solutions. Use the Perplexity API tools to provide accurate, up-to-date, and helpful information.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:10003/.well-known/openapi.yaml",
+    "has_chat_history": false
+  },
+  "human_type": "end_user",
+  "logo_url": "https://example.com/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "https://example.com/legal"
+} 

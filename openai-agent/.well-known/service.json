@@ -1,0 +1,16 @@
+{
+  "title": "AWS Assistant",
+  "description": "AWS cloud expert that answers questions about AWS services, architecture, best practices, and technology.",
+  "input": {
+    "type": "text",
+    "mime_type": "text/plain"
+  },
+  "output": {
+    "type": "text",
+    "mime_type": "text/plain"
+  },
+  "api": {
+    "url": "http://localhost:10003",
+    "type": "rest"
+  }
+} 

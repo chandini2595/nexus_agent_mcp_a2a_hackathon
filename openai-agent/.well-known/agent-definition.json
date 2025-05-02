@@ -1,0 +1,34 @@
+{
+  "name": "AWS Assistant",
+  "version": "1.0.0",
+  "description": "AWS cloud expert that answers questions about AWS services, architecture, best practices, and technology.",
+  "api": {
+    "type": "http",
+    "url": "http://localhost:10003"
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "prompt": {
+        "type": "string",
+        "description": "The AWS-related question to answer"
+      }
+    },
+    "required": ["prompt"]
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "response_format": {
+    "type": "text",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "response": {
+          "type": "string",
+          "description": "The answer to the AWS question"
+        }
+      }
+    }
+  }
+} 

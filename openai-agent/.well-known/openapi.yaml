@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: AWS Assistant API
+  description: An API for answering AWS-related technical questions
+  version: 1.0.0
+servers:
+  - url: http://localhost:10003
+paths:
+  /:
+    get:
+      summary: Get an answer to an AWS-related question
+      operationId: answerAwsQuestion
+      parameters:
+        - name: prompt
+          in: query
+          description: The AWS-related question to answer
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A successful response with the answer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The answer to the AWS question
+  /.well-known/agent.json:
+    get:
+      summary: Get agent information
+      operationId: getAgentInfo
+      responses:
+        '200':
+          description: Agent information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentInfo'
+  /.well-known/server_info.json:
+    get:
+      summary: Get server information
+      operationId: getServerInfo
+      responses:
+        '200':
+          description: Server information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerInfo'
+components:
+  schemas:
+    AgentInfo:
+      type: object
+      properties:
+        schema_version:
+          type: string
+        name_for_human:
+          type: string
+        name_for_model:
+          type: string
+        description_for_human:
+          type: string
+        description_for_model:
+          type: string
+    ServerInfo:
+      type: object
+      properties:
+        name:
+          type: string
+        human_description:
+          type: string
+        model_description:
+          type: string 
